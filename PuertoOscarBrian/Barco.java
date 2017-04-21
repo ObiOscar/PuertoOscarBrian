@@ -29,10 +29,10 @@ abstract class Barco
     */
     public String toString()
     {
-        String cadenaADevolver = "Cliente" + propietario;
-        cadenaADevolver += "Matricula" + matricula;
-        cadenaADevolver += "Eslora" + eslora;
-        cadenaADevolver += "Año de fabricación" + anoFabricacion;
+        String cadenaADevolver = "Cliente" + propietario + "\n";
+        cadenaADevolver += "Matricula" + matricula + "\n";
+        cadenaADevolver += "Eslora" + eslora + "\n";
+        cadenaADevolver += "Año de fabricación" + anoFabricacion + "\n";
         return cadenaADevolver;
     }
     

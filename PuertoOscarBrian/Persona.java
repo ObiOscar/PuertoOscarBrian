@@ -25,7 +25,7 @@ public class Persona
     */
     public String toString()
     {
-        String cadenaADevolver =nombre + " " + dni;
+        String cadenaADevolver =nombre + " " + dni + "\n";
         return cadenaADevolver;
     }
 }

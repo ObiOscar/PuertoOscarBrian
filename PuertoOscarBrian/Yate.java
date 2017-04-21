@@ -5,29 +5,31 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Yate
+public class Yate extends EmbarcacionAMotor
 {
     // instance variables - replace the example below with your own
-    private int x;
+    private int numCamarote;
 
     /**
      * Constructor for objects of class Yate
      */
-    public Yate()
+    public Yate(String matricula, double eslora, int ano, Persona propietario, int potencia, int numCamarote)
     {
-        // initialise instance variables
-        x = 0;
+        super(matricula,eslora,ano,propietario,potencia);
+        this.numCamarote=numCamarote;
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
+     * Devuelve el toString de la clase Yate
+    */
+    public String toString()
     {
-        // put your code here
-        return x + y;
+        String cadenaADevolver = super.toString();;
+        cadenaADevolver += "Numero Camarotes" + numCamarote + "\n";
+        return cadenaADevolver;
+    }
+    
+       public int getCoeficienteBernue(){       
+        return super.getCoeficienteBernue() + numCamarote;
     }
 }
