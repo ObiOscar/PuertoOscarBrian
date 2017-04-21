@@ -1,0 +1,7 @@
+Parte Oscar:
+Hacer las clases Barco, Velero, EmbarcacionAMotor, Yate y Persona.
+
+Parta Brian:
+Hacer las clases Puerto y Alquiler
+
+Cada pareja debe presentar un repositorio git en Github con el código terminado
