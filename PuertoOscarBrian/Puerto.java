@@ -1,8 +1,7 @@
- 
-
+package PuertoOscarBrian.PuertoOscarBrian;
 
 /**
- * Write a description of class Puerto here.
+ * Write a description of class Alquiler here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
@@ -62,7 +61,7 @@ public class Puerto
             }
             else
             {
-                System.out.println("El amarre " + contador + " no esta libre.");
+                System.out.println("El amarre " + contador + " no esta libre." + amarres[contador].toString());
             }
             contador ++;
         }
