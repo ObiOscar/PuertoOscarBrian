@@ -25,6 +25,7 @@ public class Alquiler
     }
     /**
      * Metodo que devuelve una cadena de caracteres con toda la informacion referente al alquiler.
+     * @return Devuelve un string con la informacion del alquiler.
      */
     public String toString()
     {
@@ -34,6 +35,7 @@ public class Alquiler
     }
     /**
      * Metodo que devuelve el precio de un determinado alquiler.
+     * @return Devuelve el precio de alquiler.
      */
      public float getPrecioAlquiler()
     {
