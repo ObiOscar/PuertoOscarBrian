@@ -33,31 +33,31 @@ public class Test0134
         puertoSantander.verEstadoAmarres();
         
         //Primeros amarres
-        assertEquals(3550, puertoSantander.alquilarAmarre(10, veleroEnrique));
-        assertEquals(362260, puertoSantander.alquilarAmarre(5, embarcacionAMotorJuan));
-        assertEquals(455900, puertoSantander.alquilarAmarre(2, yateRomeo));        
+        assertEquals(3550, puertoSantander.alquilarAmarre(10, veleroEnrique),  0.0F);
+        assertEquals(362260, puertoSantander.alquilarAmarre(5, embarcacionAMotorJuan),  0.0F);
+        assertEquals(455900, puertoSantander.alquilarAmarre(2, yateRomeo), 0.0F);        
         puertoSantander.verEstadoAmarres();   
 
         //Se llena el puerto con el siguiente amarre
-        assertEquals(2780, puertoSantander.alquilarAmarre(10, veleroJennifer));       
+        assertEquals(2780, puertoSantander.alquilarAmarre(10, veleroJennifer), 0.0F);       
         puertoSantander.verEstadoAmarres();         
         
         //Se intenta alquilar un amarre pero no hay libres
-        assertEquals(-1, puertoSantander.alquilarAmarre(3, yateMarc)); 
+        assertEquals(-1, puertoSantander.alquilarAmarre(3, yateMarc), 0.0F); 
         puertoSantander.verEstadoAmarres();          
         
         //Se intenta terminar un alquiler de un amarre inexistente
-        assertEquals(-1, puertoSantander.liquidarAlquilerAmarre(10));
+        assertEquals(-1, puertoSantander.liquidarAlquilerAmarre(10), 0.0F);
         
         //Se terminan los alquileres
-        assertEquals(2654, puertoSantander.liquidarAlquilerAmarre(0));
-        assertEquals(3760, puertoSantander.liquidarAlquilerAmarre(1));  
+        assertEquals(3550, puertoSantander.liquidarAlquilerAmarre(0), 0.0F);
+        assertEquals(362260, puertoSantander.liquidarAlquilerAmarre(1), 0.0F);  
         
         //Se intenta liquidar un alquiler que ya no existe
-        assertEquals(-1, puertoSantander.liquidarAlquilerAmarre(0));
+        assertEquals(-1, puertoSantander.liquidarAlquilerAmarre(0), 0.0F);
         
         //Marc alquila un amarre ahora que hay disponibles
-        assertEquals(67665, puertoSantander.alquilarAmarre(3, yateMarc));   
+        assertEquals(67665, puertoSantander.alquilarAmarre(3, yateMarc), 0.0F);   
         
         puertoSantander.verEstadoAmarres();            
     }

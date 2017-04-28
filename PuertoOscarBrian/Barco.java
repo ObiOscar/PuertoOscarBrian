@@ -1,20 +1,24 @@
 
+
 /**
- * Write a description of class Barco here.
+ * Es la clase barco, sera una clase abstracta, y sobre ella se basara el resto de barcos
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ *@author Oscar Fernandez Rodriguez
+ *@version 1.0
  */
 abstract class Barco
 {
-    // instance variables - replace the example below with your own
     private Persona propietario;
     private String matricula;
     private double eslora;
     private int anoFabricacion;
 
     /**
-     * Constructor for objects of class Barco
+     * Constructor de la calse Barco
+     * @param matricula Es la matricula del barco
+     * @param eslora son los metros de eslora del barco
+     * @param ano año del barco
+     * @param propietario es el propietario del barco
      */
     public Barco(String matricula, double eslora, int ano, Persona propietario)
     {
@@ -26,6 +30,7 @@ abstract class Barco
 
     /**
      * Devuelve el toString de la clase Persona
+     * @return cadenaADevolver nos muestra los atributos de la clase Persona
     */
     public String toString()
     {
@@ -36,9 +41,16 @@ abstract class Barco
         return cadenaADevolver;
     }
     
+    /**
+     * Nos devuelve los metros de eslora
+     * @return eslora nos devuelve el atributo eslora
+     */
     public double getEslora(){
         return eslora;
     }
     
+    /**
+     * es una clase abstracta que sera sobrescrita por las clases hijas.
+     */
     abstract int getCoeficienteBernue();
 }
