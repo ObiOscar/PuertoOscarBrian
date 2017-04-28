@@ -1,3 +1,5 @@
+ 
+
 
 /**
  * Es la clase Yate, sera una hija clase de la clase barco

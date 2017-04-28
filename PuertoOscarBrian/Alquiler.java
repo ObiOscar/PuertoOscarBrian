@@ -2,9 +2,9 @@
 
 
 /**
- * Write a description of class Alquiler here.
+ * Clase alquiler de amarres del puerto.
  * 
- * @author (your name) 
+ * @author (Brian) 
  * @version (a version number or a date)
  */
 public class Alquiler
@@ -13,9 +13,9 @@ public class Alquiler
     private int posicionAmarre;
     private Barco barco;
     static final int VALOR_MULTIPLICADOR_ESLORA = 10;
-    static final int VALOR_MULTIPLICADOR_BERNUA = 10;
+    static final int VALOR_MULTIPLICADOR_BERNUA = 300;
     /**
-     * Constructor for objects of class Alquiler
+     * Constructor de obejtos de la clase alquiler.
      */
     public Alquiler(int numDias,int posicionAmarre,Barco barco)
     {
@@ -23,12 +23,20 @@ public class Alquiler
         this.posicionAmarre = posicionAmarre;
         this.barco = barco;
     }
+    /**
+     * Metodo que devuelve una cadena de caracteres con toda la informacion referente al alquiler.
+     * @return Devuelve un string con la informacion del alquiler.
+     */
     public String toString()
     {
         String textoDevolver = "";
         textoDevolver = textoDevolver + diasOcupacion + " dias de alquiler, amarre numero " + posicionAmarre + barco.toString();
         return textoDevolver;
     }
+    /**
+     * Metodo que devuelve el precio de un determinado alquiler.
+     * @return Devuelve el precio de alquiler.
+     */
      public float getPrecioAlquiler()
     {
         float precioAlquiler = diasOcupacion * (10 * (float)barco.getEslora()) + VALOR_MULTIPLICADOR_BERNUA * barco.getCoeficienteBernue();
